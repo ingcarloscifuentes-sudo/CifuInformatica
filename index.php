@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CifuInformatica | Soluciones Tecnológicas en Girardot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-primary: #02a3dd;
+            --brand-dark: #002d72;
+            --brand-accent: #f8f9fa;
+        }
+
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #333; }
+
+        /* --- NAVBAR ANGOSTA --- */
+        .navbar { padding: 5px 0; min-height: 65px; background-color: rgba(255, 255, 255, 0.95) !important; backdrop-filter: blur(10px); }
+        .navbar-brand img { height: 45px; }
+        .brand-container { line-height: 1.1; }
+        .brand-main-text { color: var(--brand-dark); font-size: 1.1rem; font-weight: 800; letter-spacing: -0.5px; }
+        .brand-sub-text { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #6c757d; }
+        .nav-link { font-size: 0.8rem; color: var(--brand-dark) !important; font-weight: 700; }
+        .btn-brand { background-color: var(--brand-primary); color: white !important; font-weight: bold; border-radius: 30px; padding: 8px 20px; font-size: 0.8rem; }
+
+        /* --- HERO --- */
+        .hero-section { background: linear-gradient(135deg, var(--brand-dark) 0%, #001a41 100%); color: white; padding: 100px 0; }
+
+        /* --- SERVICIOS --- */
+        .service-card { transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 45px rgba(2, 163, 221, 0.15); border-color: var(--brand-primary); }
+        .service-icon { font-size: 2.5rem; background: linear-gradient(45deg, var(--brand-primary), var(--brand-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; display: inline-block; }
+        .service-list { padding-left: 0; list-style: none; font-size: 0.85rem; color: #555; }
+        .service-list li { margin-bottom: 8px; display: flex; align-items: flex-start; }
+        .service-list li i { color: var(--brand-primary); margin-right: 10px; margin-top: 3px; }
+
+        /* --- FOOTER --- */
+        footer { background-color: #0b0d10; }
+        footer img { filter: brightness(0) invert(1); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="imagenes/logos.png" alt="CifuInformatica Logo">
+                <div class="ms-2 brand-container d-flex flex-column">
+                    <span class="brand-main-text text-uppercase">CIFU<span style="color: var(--brand-primary);">INFORMATICA</span></span>
+                    <span class="brand-sub-text">By Carlos Cifuentes</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-uppercase align-items-center">
+                     <li class="nav-item"><a class="nav-link px-3" href="aplicaciones.php">Aplicaciones</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#perfil">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="btn btn-brand ms-lg-3 px-4" href="https://wa.me/573115929180" target="_blank">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Soluciones Digitales Profesionales</h1>
+            <p class="lead mb-5 opacity-75 fs-4">Creamos, Enseñamos, Solucionamos en Girardot y toda la región.</p>
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                <a href="#servicios" class="btn btn-light btn-lg px-5 fw-bold shadow">Nuestros Servicios</a>
+                <a href="https://wa.me/573115929180" target="_blank" class="btn btn-outline-light btn-lg px-5">Escribir al WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5">Servicios Integrales</h2>
+                <div style="width: 60px; height: 5px; background: var(--brand-primary); margin: 20px auto;"></div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 service-card p-4">
+                        <div class="text-center"><i class="bi bi-cpu service-icon"></i><h4 class="fw-bold">Soporte Técnico</h4></div>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check2-circle"></i> Formateo + S.O. + Office</li>
+                            <li><i class="bi bi-check2-circle"></i> Limpieza Interna y Externa</li>
+                            <li><i class="bi bi-check2-circle"></i> Optimización de Software</li>
+                            <li><i class="bi bi-check2-circle"></i> Instalación de Software Profesional</li>
+                            <li><i class="bi bi-check2-circle"></i> RAM y Unidades SSD / HDD</li>
+                            <li><i class="bi bi-check2-circle"></i> Cambio de Pasta Térmica</li>
+                            <li><i class="bi bi-check2-circle"></i> Soporte Remoto / Redes Wi-Fi</li>
+                            <li><i class="bi bi-check2-circle"></i> Activación de Licencias</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 service-card p-4">
+                        <div class="text-center"><i class="bi bi-code-slash service-icon"></i><h4 class="fw-bold">Desarrollo Web</h4></div>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check2-circle"></i> Aplicaciones Web a Medida</li>
+                            <li><i class="bi bi-check2-circle"></i> Proyectos en PHP, JS, Python</li>
+                            <li><i class="bi bi-check2-circle"></i> Asesorías en Desarrollo</li>
+                            <li><i class="bi bi-check2-circle"></i> Análisis y Visualización de Datos</li>
+                            <li><i class="bi bi-check2-circle"></i> Gestión de Bases de Datos</li>
+                            <li><i class="bi bi-check2-circle"></i> Versiones con Git / GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 service-card p-4">
+                        <div class="text-center"><i class="bi bi-mortarboard service-icon"></i><h4 class="fw-bold">Capacitación</h4></div>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check2-circle"></i> Clases de PHP, Python y JS</li>
+                            <li><i class="bi bi-check2-circle"></i> Fundamentos de Ciberseguridad</li>
+                            <li><i class="bi bi-check2-circle"></i> Capacitación en Ofimática (Excel)</li>
+                            <li><i class="bi bi-check2-circle"></i> Tareas de Programación</li>
+                            <li><i class="bi bi-check2-circle"></i> Introducción a la Tecnología</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="perfil" class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center mb-4 mb-md-0">
+                    <div class="p-2 border rounded-circle d-inline-block shadow-sm">
+                        <img src="imagenes/yo.png" alt="Carlos Cifuentes" class="rounded-circle img-fluid" style="width: 250px; height: 250px; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h5 class="text-primary fw-bold text-uppercase small">INGENIERO DE SISTEMAS</h5>
+                    <h2 class="fw-bold mb-3">Carlos Cifuentes</h2>
+                    <p class="text-muted fs-6">
+                        Ingeniero de Sistemas con Tarjeta Profesional, especializado en la intersección de la tecnología, la educación y el soporte técnico. Cuento con una sólida trayectoria como docente de sistemas en primaria y una capacidad probada en el mantenimiento preventivo y correctivo de infraestructura tecnológica.
+                    </p>
+                    <div class="mt-4">
+                        <span class="badge bg-dark p-2 px-3 me-1 mb-1">PHP/ Python </span>
+                        <span class="badge bg-dark p-2 px-3 me-1 mb-1">SQL / MongoDB</span>
+                        <span class="badge bg-dark p-2 px-3 me-1 mb-1">PowerBI / Tableau</span>
+                        <span class="badge bg-dark p-2 px-3 mb-1">Soporte</span>
+                        <span class="badge bg-dark p-2 px-3 mb-1">Educación</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="py-5 text-white">
+        <div class="container text-center">
+
+            <h4 class="fw-bold mb-1">CIFUINFORMÁTICA</h4>
+            <p class="text-muted small mb-4">By Carlos Cifuentes</p>
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="https://wa.me/573115929180" target="_blank" class="text-white fs-4"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.instagram.com/CifuInformatica" target="_blank" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com/@CifuInformatica" target="_blank" class="text-white fs-4"><i class="bi bi-tiktok"></i></a>
+            </div>
+            <p class="mb-1 small"><i class="bi bi-envelope me-2"></i>cifuinformatica@gmail.com</p>
+            <p class="small text-secondary mb-0">© 2026 CIFUINFORMATICA | Girardot, Cundinamarca</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

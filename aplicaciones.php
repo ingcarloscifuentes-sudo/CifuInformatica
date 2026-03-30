@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | CifuInformatica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-primary: #02a3dd;
+            --brand-dark: #002d72;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+
+        .navbar { padding: 5px 0; background-color: white !important; }
+        .navbar-brand img { height: 45px; }
+        
+        .projects-header {
+            background: linear-gradient(135deg, var(--brand-dark) 0%, #001a41 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            background: white;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(2, 163, 221, 0.2);
+        }
+
+        /* AJUSTE PARA QUE LA IMAGEN NO SE CORTE */
+        .project-img-container {
+            height: 220px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .project-img-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Esto asegura que la imagen se vea completa */
+            transition: transform 0.5s ease;
+        }
+
+        .tech-badge {
+            font-size: 0.7rem;
+            background-color: #e9ecef;
+            color: var(--brand-dark);
+            border: 1px solid #dee2e6;
+            margin-right: 5px;
+        }
+        .btn-view {
+            background-color: var(--brand-primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Estilo para el Carrusel dentro del Modal */
+        .carousel-item img {
+            border-radius: 10px;
+            max-height: 400px;
+            object-fit: contain;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.php">
+                <img src="imagenes/logos.png" alt="CifuInformatica Logo">
+                <div class="ms-2 d-flex flex-column" style="line-height: 1.1;">
+                    <span style="color: var(--brand-dark); font-weight: 800; font-size: 1.1rem;">CIFU<span style="color: var(--brand-primary);">INFORMATICA</span></span>
+                    <span style="font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: #6c757d;">Proyectos</span>
+                </div>
+            </a>
+            <a href="index.php" class="btn btn-outline-primary btn-sm rounded-pill px-3">Volver al Inicio</a>
+        </div>
+    </nav>
+
+    <header class="projects-header text-center">
+        <div class="container">
+            <h1 class="fw-bold">Mis Aplicaciones</h1>
+            <p class="lead opacity-75">Soluciones de software personalizadas y funcionales.</p>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        <div class="row g-4">
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 project-card">
+                    <div class="project-img-container">
+                        <img src="imagenes//torneo/torneo.png" alt="App Gestión Deportiva">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold mb-2">Sistema Gestor de Torneos</h5>
+                        <p class="text-muted small">Transforma la gestión de tus eventos de fútbol con CifuInformatica.
+                             Nuestra plataforma ofrece tableros de control intuitivos para organizadores y resultados para los aficionados. 
+                             Automatiza desde la programación de fechas hasta la generación de planillas oficiales,
+                             llevando la tecnología profesional a sus torneos."</p>
+                        <div class="mb-3">
+                            <span class="badge tech-badge">PHP</span>
+                            <span class="badge tech-badge">MySQL</span>
+                            <span class="badge tech-badge">Bootstrap</span>
+                        </div>
+                        <button class="btn btn-view mt-auto w-100" data-bs-toggle="modal" data-bs-target="#modalTorneo">
+                            Ver Detalles e Imágenes
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    </main>
+
+    <div class="modal fade" id="modalTorneo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 20px;">
+                <div class="modal-header border-0">
+                    <h5 class="fw-bold">Detalles: Sistema Gestor de Torneos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div id="carouselTorneo" class="carousel slide shadow-sm" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imagenes//torneo/login.png" class="d-block w-100" alt="Vista Principal">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/torneo/torneo.png" class="d-block w-100" alt="Panel Admin">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/torneo/equipos.png" class="d-block w-100" alt="Vista equipos">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/torneo/jugadores.png" class="d-block w-100" alt="Vista Jugadores">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/torneo/arbitros.png" class="d-block w-100" alt="Vista arbitros">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/torneo/carnets.png" class="d-block w-100" alt="Vista Carnets">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/torneo/fixture.png" class="d-block w-100" alt="Vista Fixture">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/torneo/planilla.png" class="d-block w-100" alt="Vista Planilla">
+                                    </div>
+
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTorneo" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselTorneo" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <h6 class="fw-bold text-primary">Descripción del Proyecto</h6>
+                            <p class="text-muted">Esta aplicación fue desarrollada para automatizar la gestión de torneos de fútbol. Permite a los organizadores cargar resultados en tiempo real, generar tablas de posiciones automáticas y gestionar las planillas de los árbitros.</p>
+                            
+                            <h6 class="fw-bold text-primary">Características Técnicas</h6>
+                            <ul class="text-muted small">
+                                <li><strong>Base de Datos:</strong> Diseño relacional en MySQL para equipos y jugadores.</li>
+                                <li><strong>Frontend:</strong> Interfaz responsiva adaptada para tablets.</li>
+                                <li><strong>Lógica:</strong> PHP para el procesamiento de goles y puntos (Victoria: 3 pts, Empate: 1 pt).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://wa.me/573115929180" class="btn btn-primary rounded-pill px-4">Consultar por esta App</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <p class="small mb-0">© 2026 CIFUINFORMATICA | Portafolio de Aplicaciones</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
